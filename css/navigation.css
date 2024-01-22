@@ -10,23 +10,18 @@
     box-shadow:0 15px 10px rgba(0,0, 0, 0.16),
     0 3px 6px rgba(0,0, 0, 0.16);
     display: none;
-    padding:20px 0px;
-    /* justify-content: space-between; */
+    padding:20px 0px; 
   }
   @media (max-width:720px){
     .tab-nav-container{display: flex;}
   }
-  .tab{
-    /* background-color: rgb(226, 226, 226); */
-    /* background-color: #f2c343; */
+  .tab{ 
     border-radius: 50px;
     cursor: pointer;
     display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    align-items: center; 
     padding: 0 10px;
-    height: 40px;
-    /* margin: 0 5px; */
+    height: 40px; 
     transition: all .3s linear; 
   }
   .tab a{
@@ -40,8 +35,7 @@
     width: max-content;  
 font-family: "SF Hello";
 font-size: 14px; 
-font-weight: 400; 
-    /* transition: width 0.4s linear; */
+font-weight: 400;  
     color: black;
   }
   .tab.active{ 
@@ -51,11 +45,7 @@ font-weight: 400;
   } 
   svg path{
     fill: white;
-  }
-  svg{
-    /* width: 24px; */
-    /* height: 24px; */
-  }
+  } 
   .tab.active svg path{
     fill: black;
   }
