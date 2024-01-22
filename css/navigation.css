@@ -31,7 +31,7 @@
     margin: 0; 
   }
   .tab.active a{
-    margin-left: 10px;
+    margin:0px 10px;
     width: max-content;  
 font-family: "SF Hello";
 font-size: 14px; 
