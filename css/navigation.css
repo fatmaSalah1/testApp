@@ -11,7 +11,7 @@
     0 3px 6px rgba(0,0, 0, 0.16);
     display: none;
     padding:20px 0px;
-    justify-content: space-between; 
+    /* justify-content: space-between; */
   }
   @media (max-width:720px){
     .tab-nav-container{display: flex;}
@@ -23,16 +23,17 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 0 10px;
     height: 40px;
-    margin: 0 5px;
-    transition: background .3s linear; 
+    /* margin: 0 5px; */
+    transition: all .3s linear; 
   }
   .tab a{
     font-weight: bold;
     overflow: hidden;
     width: 0;
+    margin: 0; 
   }
   .tab.active a{
     margin-left: 10px;
@@ -40,10 +41,11 @@
 font-family: "SF Hello";
 font-size: 14px; 
 font-weight: 400; 
-    transition: width 0.4s linear;
+    /* transition: width 0.4s linear; */
     color: black;
   }
   .tab.active{ 
+    margin:0px 10px;
     background-color: #f2c343; 
     color: black;
   } 
