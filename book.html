@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Consultation </title>
+    <link rel="stylesheet" href="css/contact.css">   
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+</head>
+<body>
+   <main>
+    <button onclick="openContact()">appear </button>  <!-- will remove -->
+      <div id="parent">
+        <div class="parent">
+            <div id="close-icon" onclick="closeContact()">
+                <img src="assets/images/close-icon.svg" alt="" srcset="">
+            </div>
+            <div class="content">
+                <div class="title">
+                    <p>Book a Consultation </p>
+                </div>
+                <div class="form">
+                    <form action=""  id="emailForm">
+                      <div class="from-content">
+                        <input type="text" name="name" id="" placeholder="Name*" required>
+                        <input type="email" name="email" id="" placeholder="Email*" required>
+                        <!-- <input type="text" name="role" id="" placeholder="Role*" required> -->
+                        <select name="role" id="" class="form-select "  >
+                          <option value="Role" disabled selected hidden>Role*</option>
+                          <option value="admin">admin</option>
+                          <option value="admin">admin</option>
+                          <option value="admin">admin</option>
+                        </select>
+                        <!-- <input type="text" name="institution" id="" placeholder="Institution*" required> -->
+                        <select name="institution" id="" class="form-select "  >
+                          <option value="institution" disabled selected hidden>Institution*</option>
+                          <option value="admin">admin</option>
+                          <option value="admin">admin</option>
+                          <option value="admin">admin</option>
+                        </select>
+                        <input type="tel" name="mobile" id="" placeholder="Mobile( optional )" pattern="[0-9]{11}">
+                        <textarea name="message_details" id="" placeholder="Message Details*" required></textarea>
+                      </div>
+                        <button type="submit" class="button"><span class="show">Submit</span> <div class="spinner hide"></div>  </button> 
+                    </form>
+
+                </div>
+                
+            </div>
+        </div>
+      </div>
+   </main>
+
+   <script src="js/contact.js"></script>
+</body>
+</html>

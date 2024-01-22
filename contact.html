@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="css/contact.css"> 
+   
+    <link rel="stylesheet" href="css/select.css">
+ 
+</style>
+  </head>
+<body>
+   <main> 
+    <button onclick="openContact()">appear </button>  <!-- will remove -->
+      <div id="parent"  >
+      
+        <div class="parent">
+            <div id="close-icon" onclick="closeContact()">
+                <img src="assets/images/close-icon.svg" alt="" srcset="">
+            </div>
+            
+            <div class="content-contact">
+                <div class="title">
+                    <p>Contact Us</p>
+                </div>
+                <div class="form">
+                    <form action=""  id="emailForm">
+                      <div class="from-content">
+                        <div class="input">
+                          <input type="text" name="name" id="" placeholder="Name*" required>
+                          <p style="color: red;" >lorem</p>
+                        </div>
+                        <div class="input">
+                          <input type="email" name="email" id="" placeholder="Email*" required>
+                          <p style="color: red;" >lorem</p>
+                        </div>
+                        <!-- <input type="text" name="role" id="" placeholder="Role*" required> --> 
+                        <div class="select">
+                          <select >
+                              <option >Roles</option>
+                                 <option value="1">Instructional Facilitator</option>
+                                                                      <option value="2">Mentor and Guide</option>
+                                                                      <option value="3">Assessment and Evaluation</option>
+                                                                      <option value="4">Classroom Management</option>
+                                                                      <option value="5">Curriculum Developer</option>
+                                                                      <option value="6">Technology Integrator</option> 
+                             
+                        
+                          </select>
+                        </div>
+                        <div class="input">
+                        <input type="text" name="institution" id="" placeholder="Institution*" required>
+                        <p style="color: red;" >lorem</p>
+                        </div>
+                        
+                      <div class="input">
+                        <input type="tel" name="mobile" id="" placeholder="Mobile( optional )" pattern="[0-9]{11}">
+                        <p style="color: red;" >lorem</p>
+                      </div>
+                     <!-- <div class="textarea"> -->
+                      <textarea name="message_details" id="" placeholder="Message Details*" required></textarea>
+                     <!-- </div> -->
+                      </div>
+                        <button type="submit" class="button"><span class="show">Send Message</span> <div class="spinner hide"></div> </button> 
+                    </form>
+
+                </div>
+                
+
+
+
+            </div>
+        </div>
+      </div>
+   </main>
+
+   <script src="js/contact.js"></script>
+   <script src="js/select.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,203 @@
+ /* *{box-sizing: border-box;padding: 0;margin: 0;}
+  .select { 
+    position:relative;
+    width:250px; 
+    height: 60px;  
+  }
+ 
+  #select-box {  
+width: 100%;
+    padding: 14.5px 12px; 
+    border-radius: 5px;
+    background: rgba(246, 246, 246, 0.07) !important; 
+    border: none;
+    color: #EDEDED !important;
+    font-family: SF Hello;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;  
+    height: 60px; 
+    z-index: 234567;
+  }
+     
+  #select-box::placeholder{
+    color: #7C7C7C; 
+  }
+  .options{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    transition: all .7s ;
+   
+   overflow: hidden;
+  }
+  .options .option{ 
+    height: 40px ;
+    background-color: black;
+    border: 2px solid;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: #dedede; 
+    font-family: SF Hello;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;  
+    border-collapse: collapse;
+  }
+  .option:hover{
+    background-color: #dedede;
+    color: black;
+    border-color: #dedede;
+  }
+  .options .option:first-of-type{
+    border-radius: 5px 5px 0px 0px;
+  }
+  .options .option:last-of-type{
+    border-radius: 0px 0px 5px 5px;
+  }
+ .options input[type="radio"]{
+    position: absolute;
+    left: -123456px;
+    opacity: 0;
+ }
+ .show{
+top: 60px; 
+display: flex;
+z-index: 23456; 
+ }
+ .hide{
+    top: 30px;  
+    display: none; 
+ }  */
+
+
+.select{
+  position: relative;
+}
+          
+ /* START SELECT3.css */
+ .searchSelect3 {
+     /* position: relative; */
+     position: static !important; /* make that to make option group start from .select */
+     color: #000;
+     margin-bottom: 10px;
+     width: 100% !important;
+     height: 100% ;
+     border: none !important;
+     display: flex;
+     align-items: center;
+     /* /font-size: 16px;/ */
+ }
+ 
+ .searchSelect3_Input {   /* input   */
+     border:none !important;
+     border-radius: 5px;
+     /* text-indent: 10px; */
+     padding: 0px; 
+     width: 100% !important;
+     background-color: transparent !important;
+     /* outline: none; */ 
+      
+ }
+ 
+ .searchSelect3_Caret_Down { /* drop down  box*/
+     position: absolute;
+     cursor: pointer; 
+     top: 50%;
+     transform: translateY(-50%);
+     left: 0px !important;
+     text-align: right;
+     width: 100%;
+     height: 100%;  
+ }
+ .searchSelect3_Caret_Down::before{/* drop down  icon  */
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  color:#ccc;
+  padding-right: 20px;
+ }
+ .searchSelect3_Times {
+     position: absolute;
+     /* top: 10px; */
+     /* left: 210px; */
+     cursor: pointer;
+     display: none;
+ }
+ 
+ .searchSelect3_List {   /*  == option group  */
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: auto;
+     overflow-x: hidden;
+     /* height: 20em;  */
+     height: max-content; 
+     max-height: 20em;
+     position: absolute;
+     top: 60px;/* height of .select   */
+     left: 0;
+     width: 100% !important;
+     border-radius:0px 0px 10px 10px;
+     /* border: 2px solid rebecc/apurple;  */
+ }
+ 
+ .searchSelect3_List li {    /**     == option */
+     list-style-type: none;   
+     color: #000000; 
+     border-bottom: 1px solid #e3e2e24f;
+     min-height: 40px;
+     background: rgb(37, 37, 37);
+     /* background-color: rgb(43, 43, 43); */
+     color: #dedede;
+     display: flex;
+     align-items: center;
+ }
+ .searchSelect3_List li:last-of-type {
+  border-bottom: none;
+ }
+ .searchSelect3_List li:hover {
+     cursor: pointer;
+     background: #dedede;
+     color: black !important;  
+ }
+ 
+ 
+ .searchSelect3_List li label {
+     padding: 0.5em;
+     cursor: pointer;
+ }
+ 
+ .searchSelect3_List li:hover label {   /*   text in option  */
+     color: black;
+ }
+ 
+ .searchSelect3_Input::-ms-clear {
+ display: none;
+ width: 0;
+ height: 0;
+ }
+ 
+ .searchSelect3_Input::-ms-reveal {
+     display: none;
+     width: 0;
+     height: 0;
+ }
+ 
+ .searchSelect3_Input::-webkit-search-decoration,
+ .searchSelect3_Input::-webkit-search-cancel-button,
+ .searchSelect3_Input::-webkit-search-results-button,
+ .searchSelect3_Input::-webkit-search-results-decoration,#selectBankListsearchSelect3_Times {
+     display: none !important;
+ }
+ /* END SELECT3.css */
+ 
+ 
