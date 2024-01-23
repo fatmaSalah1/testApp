@@ -40,7 +40,13 @@ font-size: 14px;
 font-weight: 400;  
     color: black;
   }
-  
+  i{
+    font-size: 28px !important;
+    color: white;
+  }
+  .tab.active i{
+    color: black;
+  }
   .tab.active{ 
     margin:0px 10px; 
     background-color: #f2c343; 

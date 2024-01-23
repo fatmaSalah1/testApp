@@ -43,7 +43,7 @@ tabs.forEach((clickedTab) => {
 
 
 
-// Sample multi-dimensional array of objects
+// Sample multi-dimensional array of objects. code below  not cantain to this project
 const multiArray =[
   {nam:'sdz'},
   [
@@ -168,4 +168,4 @@ function filterNestedArray(arr, result = [], parentData = []) {
 const filteredNestedArray = filterNestedArray(multiArray);
 
 // Log the filtered nested array
-console.log(filteredNestedArray);
+// console.log(filteredNestedArray);
