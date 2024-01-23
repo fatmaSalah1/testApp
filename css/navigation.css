@@ -20,15 +20,17 @@
     cursor: pointer;
     display: flex;
     align-items: center; 
+    justify-content: space-between;
     padding: 0 10px;
-    height: 40px; 
-    transition: all .3s linear; 
+    height: 40px;  
+    margin: 0px 15px;
   }
   .tab a{
     font-weight: bold;
     overflow: hidden;
     width: 0;
     margin: 0; 
+    transition:  all .3s;
   }
   .tab.active a{
     margin:0px 10px;
@@ -38,8 +40,9 @@ font-size: 14px;
 font-weight: 400;  
     color: black;
   }
+  
   .tab.active{ 
-    margin:0px 10px;
+    margin:0px 10px; 
     background-color: #f2c343; 
     color: black;
   } 
@@ -48,4 +51,8 @@ font-weight: 400;
   } 
   .tab.active svg path{
     fill: black;
+  }
+  svg{
+    width: 32px;
+    height: 32px;
   }
