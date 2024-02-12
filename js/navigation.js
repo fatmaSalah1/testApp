@@ -2,8 +2,8 @@ function sendEmail2(name, email, mobile, role, institution, messageDetails, loca
   const subject = 'email subject';
   var mailtoLink = 'mailto:fatmsalah767@gmail.com' +
     '?subject=' + encodeURIComponent(subject) +
-    '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone number: ' + mobile + '\nRole: ' + role + '\nInstitution: ' + institution + '\nMessage Details: ' + messageDetails + '\nLocation: ' + location);
-  window.location.href = mailtoLink;
+    '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone number: ' + mobile + '\nRole: ' + role + '\nInstitution: ' + institution + '\nMessage Details: ' + messageDetails + 'Location: ' + location);
+  
 }
 
 window.addEventListener('load', function() {
