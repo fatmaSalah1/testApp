@@ -1,23 +1,44 @@
+const nodemailer = require('nodemailer');
+
 function sendEmail2(name, email, mobile, role, institution, messageDetails, location) {
   const subject = 'email subject';
-  var mailtoLink = 'mailto:fatmsalah767@gmail.com' +
-    '?subject=' + encodeURIComponent(subject) +
-    '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone number: ' + mobile + '\nRole: ' + role + '\nInstitution: ' + institution + '\nMessage Details: ' + messageDetails + 'Location: ' + location);
-  
-}
- // Get the user's location
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var latitude = position.coords.latitude;
-      var longitude = position.coords.longitude;
-      var location = 'Latitude: ' + latitude + ', Longitude: ' + longitude;
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'your_email@example.com',
+      pass: 'your_password'
+    }
+  });
 
-      // Call the updated function with the user's location
-      sendEmail2('John Doe', 'johndoe@example.com', '1234567890', 'Role', 'Institution', 'Message', location);
-    });
-  } else {
-    console.log('Geolocation is not supported by this browser.');
-  }
+  const mailOptions = {
+    from: 'your_email@example.com',
+    to: 'fatmsalah767@gmail.com',
+    subject: subject,
+    text: `Name: ${name}\nEmail: ${email}\nPhone number: ${mobile}\nRole: ${role}\nInstitution: ${institution}\nMessage Details: ${messageDetails}\nLocation: ${location}`
+  };
+
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+}
+
+// Get the user's location
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    var location = 'Latitude: ' + latitude + ', Longitude: ' + longitude;
+
+    // Call the updated function with the user's location
+    sendEmail2('John Doe', 'johndoe@example.com', '1234567890', 'Role', 'Institution', 'Message', location);
+  });
+} else {
+  console.log('Geolocation is not supported by this browser.');
+}
 
 const tabs = document.querySelectorAll(".tab");
 const tabContainer = document.querySelector(".tab-nav-container");  
