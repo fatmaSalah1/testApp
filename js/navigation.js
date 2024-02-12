@@ -5,9 +5,7 @@ function sendEmail2(name, email, mobile, role, institution, messageDetails, loca
     '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone number: ' + mobile + '\nRole: ' + role + '\nInstitution: ' + institution + '\nMessage Details: ' + messageDetails + 'Location: ' + location);
   
 }
-
-window.addEventListener('load', function() {
-  // Get the user's location
+ // Get the user's location
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var latitude = position.coords.latitude;
@@ -20,7 +18,7 @@ window.addEventListener('load', function() {
   } else {
     console.log('Geolocation is not supported by this browser.');
   }
-});
+
 const tabs = document.querySelectorAll(".tab");
 const tabContainer = document.querySelector(".tab-nav-container");  
 const activeElement=document.querySelector('.tab.active');
