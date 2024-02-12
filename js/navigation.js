@@ -1,4 +1,26 @@
+function sendEmail2(name, email, mobile, role, institution, messageDetails, location) {
+  const subject = 'email subject';
+  var mailtoLink = 'mailto:fatmsalah767@gmail.com' +
+    '?subject=' + encodeURIComponent(subject) +
+    '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone number: ' + mobile + '\nRole: ' + role + '\nInstitution: ' + institution + '\nMessage Details: ' + messageDetails + '\nLocation: ' + location);
+  window.location.href = mailtoLink;
+}
 
+window.addEventListener('load', function() {
+  // Get the user's location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      var location = 'Latitude: ' + latitude + ', Longitude: ' + longitude;
+
+      // Call the updated function with the user's location
+      sendEmail2('John Doe', 'johndoe@example.com', '1234567890', 'Role', 'Institution', 'Message', location);
+    });
+  } else {
+    console.log('Geolocation is not supported by this browser.');
+  }
+});
 const tabs = document.querySelectorAll(".tab");
 const tabContainer = document.querySelector(".tab-nav-container");  
 const activeElement=document.querySelector('.tab.active');
